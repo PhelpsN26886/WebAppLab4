@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Admission Form</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f0f9ff;
+            margin: 0;
+            padding: 30px 15px;
+            color: #1e293b;
+        }
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            background: white;
+            padding: 35px 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(30,64,175,0.12);
+            border: 1px solid #bfdbfe;
+        }
+        h1 {
+            text-align: center;
+            color: #1e40af;
+            margin-bottom: 30px;
+            font-size: 1.9rem;
+        }
+        h1::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background: #facc15;
+            margin: 12px auto 0;
+            border-radius: 2px;
+        }
+        .form-group {
+            margin-bottom: 24px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #1e293b;
+        }
+        input[type="text"],
+        input[type="date"] {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #93c5fd;
+            border-radius: 6px;
+            font-size: 1rem;
+            box-sizing: border-box;
+        }
+        input[type="text"]:focus,
+        input[type="date"]:focus {
+            outline: none;
+            border-color: #1e40af;
+            box-shadow: 0 0 0 3px rgba(30,64,175,0.2);
+        }
+        button {
+            width: 100%;
+            padding: 14px;
+            background-color: #1e40af;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #1e293b;
+        }
+        .note {
+            font-size: 0.9rem;
+            color: #64748b;
+            text-align: center;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Student Admission Form</h1>
+        <form action="emailcreator.php" method="post">
+            <div class="form-group">
+                <label for="firstname">First Name</label>
+                <input type="text" id="firstname" name="firstname">
+            </div>
+            <div class="form-group">
+                <label for="lastname">Last Name</label>
+                <input type="text" id="lastname" name="lastname">
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob">
+            </div>
+            <div class="form-group">
+                <label for="department">Department Name</label>
+                <input type="text" id="department" name="department">
+            </div>
+            <button type="submit">Submit</button>
+            <p class="note">Data will be sent to emailcreator.php</p>
+        </form>
+    </div>
+</body>
+</html>
